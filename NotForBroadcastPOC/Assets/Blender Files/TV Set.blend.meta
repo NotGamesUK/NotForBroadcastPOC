@@ -8,19 +8,30 @@ ModelImporter:
     100000: //RootNode
     100002: TV_Box
     100004: TV_Screen
+    100006: Plane
+    100008: Video_Plane
     400000: //RootNode
     400002: TV_Box
     400004: TV_Screen
+    400006: Plane
+    400008: Video_Plane
     2100000: Material
+    2100002: unnamed
     2300000: //RootNode
     2300002: TV_Box
     2300004: TV_Screen
+    2300006: Plane
+    2300008: Video_Plane
     3300000: //RootNode
     3300002: TV_Box
     3300004: TV_Screen
+    3300006: Plane
+    3300008: Video_Plane
     4300000: TV_Set
     4300002: TV_Screen
     4300004: TV_Box
+    4300006: Plane
+    4300008: Video_Plane
     7400000: Default Take
     9500000: //RootNode
   externalObjects: {}
