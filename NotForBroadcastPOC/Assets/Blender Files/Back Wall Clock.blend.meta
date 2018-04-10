@@ -1,43 +1,16 @@
 fileFormatVersion: 2
-guid: 2247d52f33ed99a48a71fbbcc3d40ba6
-timeCreated: 1522929400
+guid: c9c5bb8ab6c08b84d8769138bf9f8359
+timeCreated: 1523366275
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
-    100000: Cube
-    100002: //RootNode
-    100004: wall
-    100006: Door
-    100008: Wall
-    100010: Window
-    400000: Cube
-    400002: //RootNode
-    400004: wall
-    400006: Door
-    400008: Wall
-    400010: Window
-    2100000: unnamed
-    2100002: Material
-    2100004: Mottled_Glass
-    2100006: Door
-    2300000: Cube
-    2300002: wall
-    2300004: //RootNode
-    2300006: Door
-    2300008: Wall
-    2300010: Window
-    3300000: Cube
-    3300002: wall
-    3300004: //RootNode
-    3300006: Door
-    3300008: Wall
-    3300010: Window
+    100000: //RootNode
+    400000: //RootNode
+    2100000: Material
+    2300000: //RootNode
+    3300000: //RootNode
     4300000: Cube
-    4300002: wall
-    4300004: Wall
-    4300006: Window
-    4300008: Door
     7400000: Default Take
     9500000: //RootNode
   externalObjects: {}
