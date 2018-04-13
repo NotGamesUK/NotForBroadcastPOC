@@ -21,6 +21,7 @@ ModelImporter:
     2100002: Material
     2100004: Mottled_Glass
     2100006: Door
+    2100008: glass
     2300000: Cube
     2300002: wall
     2300004: //RootNode
