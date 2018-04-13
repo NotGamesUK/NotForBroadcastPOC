@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 67124eb903b11624b83ca67eb9083a3a
-timeCreated: 1523367800
+guid: 75096365ea82b644bbc229c2f89bd746
+timeCreated: 1523561948
 licenseType: Free
 TrueTypeFontImporter:
   externalObjects: {}
@@ -10,9 +10,9 @@ TrueTypeFontImporter:
   characterSpacing: 0
   characterPadding: 1
   includeFontData: 1
-  fontName: RussellSquare
+  fontName: Digital Counter 7
   fontNames:
-  - RussellSquare
+  - Digital Counter 7
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0
