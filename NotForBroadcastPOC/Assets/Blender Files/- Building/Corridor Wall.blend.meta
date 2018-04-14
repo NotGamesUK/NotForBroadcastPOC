@@ -1,16 +1,17 @@
 fileFormatVersion: 2
-guid: ee0c1b5123834f94e86ddd8c54c9e0e8
-timeCreated: 1523128366
+guid: 8838a81815c43dc468abbfc76936531b
+timeCreated: 1523705652
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
-    2100000: unnamed
+    2100000: Material
     2300000: //RootNode
     3300000: //RootNode
     4300000: Cube
+    4300002: Corridor_Wall
     7400000: Default Take
     9500000: //RootNode
   externalObjects: {}
