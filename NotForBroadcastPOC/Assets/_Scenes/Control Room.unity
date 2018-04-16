@@ -2404,6 +2404,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 821f9e0f78618ed4182bb48eb55f0974, type: 2}
+    - target: {fileID: 2300008, guid: e05ce559446774a46a1a7c01e1bc6baa, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0ec372e5c22de074bb97d7138a2c502e, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e05ce559446774a46a1a7c01e1bc6baa, type: 3}
   m_IsPrefabParent: 0
@@ -3558,7 +3562,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: c72ca07c5b8f43e42802aa7125d82a95, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: c72ca07c5b8f43e42802aa7125d82a95, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -3608,7 +3612,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a8ae4d7ceae1b384eaf6597f19cca8b8, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a8ae4d7ceae1b384eaf6597f19cca8b8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -4103,7 +4107,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: de4599262d4c0c941a78c0d1710fa699, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: de4599262d4c0c941a78c0d1710fa699, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -7321,7 +7325,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8838a81815c43dc468abbfc76936531b, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 8838a81815c43dc468abbfc76936531b, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -7833,7 +7837,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: ae2ca3866daeff64aa89077320490790, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: ae2ca3866daeff64aa89077320490790, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
