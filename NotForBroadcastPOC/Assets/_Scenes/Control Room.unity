@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.5678994, g: 0.6265056, b: 0.73114336, a: 1}
+  m_IndirectSpecularColor: {r: 0.5673527, g: 0.6258894, b: 0.73059064, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -6469,6 +6469,38 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: b08428b6b83baae438042a5f74f70fcd, type: 2}
+    - target: {fileID: 2300014, guid: 48dfa99bf1fa917499a5c36af4d24073, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 242c7cb8d1e6c94468c03213669ca9f8, type: 2}
+    - target: {fileID: 2300012, guid: 48dfa99bf1fa917499a5c36af4d24073, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: ca0ec4aad189479439739f324d466c78, type: 2}
+    - target: {fileID: 400018, guid: 48dfa99bf1fa917499a5c36af4d24073, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 400018, guid: 48dfa99bf1fa917499a5c36af4d24073, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.63
+      objectReference: {fileID: 0}
+    - target: {fileID: 400018, guid: 48dfa99bf1fa917499a5c36af4d24073, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 5.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300016, guid: 48dfa99bf1fa917499a5c36af4d24073, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 84c3b4129650a5648b8c2efa803cd411, type: 2}
+    - target: {fileID: 2300006, guid: 48dfa99bf1fa917499a5c36af4d24073, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0ec372e5c22de074bb97d7138a2c502e, type: 2}
+    - target: {fileID: 2300018, guid: 48dfa99bf1fa917499a5c36af4d24073, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 84c3b4129650a5648b8c2efa803cd411, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 48dfa99bf1fa917499a5c36af4d24073, type: 3}
   m_IsPrefabParent: 0
