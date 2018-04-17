@@ -9,21 +9,36 @@ ModelImporter:
     100002: Body
     100004: Handset
     100006: //RootNode
+    100008: Speaker
+    100010: Talk_Button
+    100012: Grill_For_Intercom
     400000: Answer_Button
     400002: Body
     400004: Handset
     400006: //RootNode
+    400008: Speaker
+    400010: Talk_Button
+    400012: Grill_For_Intercom
     2100000: unnamed
     2100002: Material
     2300000: Answer_Button
     2300002: Body
     2300004: Handset
+    2300006: Speaker
+    2300008: Talk_Button
+    2300010: Grill_For_Intercom
     3300000: Answer_Button
     3300002: Body
     3300004: Handset
+    3300006: Speaker
+    3300008: Talk_Button
+    3300010: Grill_For_Intercom
     4300000: Answer_Button
     4300002: Handset
     4300004: Body
+    4300006: Talk_Button
+    4300008: Speaker
+    4300010: Grill_For_Intercom
     7400000: Default Take
     9500000: //RootNode
   externalObjects: {}
