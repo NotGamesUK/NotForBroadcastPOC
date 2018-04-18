@@ -32,3 +32,4 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+NotForBroadcastPOC/Assets/_Scenes/Control Room.unity
