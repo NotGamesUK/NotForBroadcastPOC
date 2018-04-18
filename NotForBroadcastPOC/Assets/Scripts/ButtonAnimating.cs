@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Button : MonoBehaviour {
+public class ButtonAnimating : MonoBehaviour {
 
     public Material buttonUpMaterial;
     public Material mouseOverMaterialUp;
@@ -10,19 +10,23 @@ public class Button : MonoBehaviour {
     public Material mouseOverMaterialDown;
     public enum type { Lock, Hold };
     public type buttonType;
+    public Vector3 myTranslation;
+    public float speed=7;
 
-
+    private Vector3 startPosition;
+    private Vector3 endPosition;
     private MeshRenderer myRenderer;
-    private Animator myAnimator;
     private bool isSelected = false;
     private bool isDepressed = false;
     private bool canRelease = false;
+    private float myDirection;
+    private int count = 0;
 
 	// Use this for initialization
 	void Start () {
         myRenderer = GetComponent<MeshRenderer>();
-        myAnimator = GetComponent<Animator>();
-	}
+        startPosition = this.transform.position;
+    }
 
     private void OnMouseEnter()
     {
@@ -31,7 +35,6 @@ public class Button : MonoBehaviour {
         {
             myRenderer.material = mouseOverMaterialDown;
         }
-        Debug.Log("Mouse Enter");
         isSelected = true;
     }
 
@@ -44,12 +47,10 @@ public class Button : MonoBehaviour {
             canRelease = true;
         }
 
-        Debug.Log("Mouse Leave");
         isSelected = false;
-        if (buttonType==type.Hold)
+        if (buttonType==type.Hold && isDepressed)
         {
-            myAnimator.SetTrigger("released");
-            isDepressed = false;
+            MoveUp();
         }
     }
 
@@ -57,11 +58,7 @@ public class Button : MonoBehaviour {
     {
         if (isSelected && !isDepressed)
         {
-            myRenderer.material = buttonDownMaterial;
-            Debug.Log("Button Clicked");
-            myAnimator.SetTrigger("pressed");
-            myAnimator.ResetTrigger("released");
-            isDepressed = true;
+            MoveDown();
             if (buttonType == type.Lock)
             {
                 canRelease = false;
@@ -73,19 +70,14 @@ public class Button : MonoBehaviour {
     {
         if (buttonType == type.Hold && isSelected && isDepressed)
         {
-            myAnimator.SetTrigger("released");
-            myAnimator.ResetTrigger("pressed");
             myRenderer.material = mouseOverMaterialUp;
-            isDepressed = false;
+            MoveUp();
         }
         if (buttonType == type.Lock)
         {
             if (canRelease)
             {
-                myAnimator.SetTrigger("released");
-                myAnimator.ResetTrigger("pressed");
-                myRenderer.material = mouseOverMaterialUp;
-                isDepressed = false;
+                MoveUp();
             }
             else
             {
@@ -96,8 +88,52 @@ public class Button : MonoBehaviour {
 
     }
 
+    public void MoveUp()
+    {
+        myDirection = -1;
+        isDepressed = false;
+    }
+
+    public void MoveDown()
+    {
+        myDirection = 1;
+        isDepressed = true;
+    }
+
     // Update is called once per frame
     void Update () {
-		
+		if (myDirection != 0)
+        {
+            this.transform.Translate(myTranslation*(myDirection/speed));
+            count++;
+            if (count == speed)
+            {
+                if (myDirection == 1) {
+                    this.transform.position = startPosition;
+                    this.transform.Translate(myTranslation);
+                    if (isSelected)
+                    {
+                        myRenderer.material = mouseOverMaterialDown;
+                    }
+                    else
+                    {
+                        myRenderer.material = buttonDownMaterial;
+                    }
+                } else
+                {
+                    this.transform.position = startPosition;
+                    if (isSelected)
+                    {
+                        myRenderer.material = mouseOverMaterialUp;
+                    }
+                    else
+                    {
+                        myRenderer.material = buttonUpMaterial;
+                    }
+                }
+                count = 0;
+                myDirection = 0;
+            }
+        }
 	}
 }

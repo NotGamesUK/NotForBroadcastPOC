@@ -203,7 +203,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4654753056336504, guid: db79b6aae92f7974ebbb41ccf30d3f16, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.1407
       objectReference: {fileID: 0}
     - target: {fileID: 4654753056336504, guid: db79b6aae92f7974ebbb41ccf30d3f16, type: 2}
       propertyPath: m_LocalPosition.y
@@ -234,6 +234,66 @@ Prefab:
       value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: db79b6aae92f7974ebbb41ccf30d3f16, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1001 &779993314
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4654753056336504, guid: db79b6aae92f7974ebbb41ccf30d3f16, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0.1631
+      objectReference: {fileID: 0}
+    - target: {fileID: 4654753056336504, guid: db79b6aae92f7974ebbb41ccf30d3f16, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4654753056336504, guid: db79b6aae92f7974ebbb41ccf30d3f16, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4654753056336504, guid: db79b6aae92f7974ebbb41ccf30d3f16, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0.5007553
+      objectReference: {fileID: 0}
+    - target: {fileID: 4654753056336504, guid: db79b6aae92f7974ebbb41ccf30d3f16, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4654753056336504, guid: db79b6aae92f7974ebbb41ccf30d3f16, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4654753056336504, guid: db79b6aae92f7974ebbb41ccf30d3f16, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.8655889
+      objectReference: {fileID: 0}
+    - target: {fileID: 4654753056336504, guid: db79b6aae92f7974ebbb41ccf30d3f16, type: 2}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1597705708751664, guid: db79b6aae92f7974ebbb41ccf30d3f16, type: 2}
+      propertyPath: m_Name
+      value: Vision Mixer Button (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1900159227205598, guid: db79b6aae92f7974ebbb41ccf30d3f16, type: 2}
+      propertyPath: m_Name
+      value: ButtonAnimating
+      objectReference: {fileID: 0}
+    - target: {fileID: 4483707169912516, guid: db79b6aae92f7974ebbb41ccf30d3f16, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -0.0021
+      objectReference: {fileID: 0}
+    - target: {fileID: 4483707169912516, guid: db79b6aae92f7974ebbb41ccf30d3f16, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 95761856180793074, guid: db79b6aae92f7974ebbb41ccf30d3f16, type: 2}
+    - {fileID: 114971802499065456, guid: db79b6aae92f7974ebbb41ccf30d3f16, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: db79b6aae92f7974ebbb41ccf30d3f16, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &911368194
@@ -343,6 +403,29 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 84c8b8609f9bb434eaf5248f17ff1293, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1576708523 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1900159227205598, guid: db79b6aae92f7974ebbb41ccf30d3f16,
+    type: 2}
+  m_PrefabInternal: {fileID: 779993314}
+--- !u!114 &1576708525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1576708523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcf7eb6d72f3feb4abe22a2c3b5a1220, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonUpMaterial: {fileID: 2100000, guid: 13e69c447407f3746b050a43edf3f6f7, type: 2}
+  mouseOverMaterialUp: {fileID: 2100000, guid: 8ef7dc0f91b65f949beeb50d1c64be0e, type: 2}
+  buttonDownMaterial: {fileID: 2100000, guid: b6ef4d2743919554d8748952bce10879, type: 2}
+  mouseOverMaterialDown: {fileID: 2100000, guid: 242c7cb8d1e6c94468c03213669ca9f8,
+    type: 2}
+  buttonType: 0
+  myTranslation: {x: 0, y: 0, z: -0.01}
 --- !u!1001 &2035791405
 Prefab:
   m_ObjectHideFlags: 0
