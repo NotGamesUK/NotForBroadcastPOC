@@ -8,14 +8,14 @@ public class Button : MonoBehaviour {
     public Material mouseOverMaterial;
     public Material mouseDownMaterial;
 
-    private SkinnedMeshRenderer myRenderer;
+    private MeshRenderer myRenderer;
     private Animator myAnimator;
     private bool isSelected = false;
 
 	// Use this for initialization
 	void Start () {
-        myRenderer = GetComponent<SkinnedMeshRenderer>();
-        myAnimator = GetComponentInParent<Animator>();
+        myRenderer = GetComponent<MeshRenderer>();
+        myAnimator = GetComponent<Animator>();
 	}
 
     private void OnMouseEnter()
@@ -38,9 +38,20 @@ public class Button : MonoBehaviour {
         {
             myRenderer.material = mouseDownMaterial;
             Debug.Log("Button Clicked");
-            myAnimator.SetTrigger("clicked");
+            myAnimator.SetTrigger("pressed");
         }
     }
+
+    private void OnMouseUp()
+    {
+        if (isSelected)
+        {
+            myRenderer.material = mouseOverMaterial;
+            Debug.Log("Button Released");
+            myAnimator.SetTrigger("released");
+        }
+    }
+
     // Update is called once per frame
     void Update () {
 		
