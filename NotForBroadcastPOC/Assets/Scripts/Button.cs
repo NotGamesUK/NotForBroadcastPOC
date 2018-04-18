@@ -4,13 +4,18 @@ using UnityEngine;
 
 public class Button : MonoBehaviour {
 
-    public Material idleMaterial;
-    public Material mouseOverMaterial;
-    public Material mouseDownMaterial;
+    public Material buttonUpMaterial;
+    public Material mouseOverMaterialUp;
+    public Material buttonDownMaterial;
+    public Material mouseOverMaterialDown;
+    public enum type { Lock, Hold };
+    public type buttonType;
 
     private MeshRenderer myRenderer;
     private Animator myAnimator;
     private bool isSelected = false;
+    private bool isDepressed = false;
+    private bool canRelease = false;
 
 	// Use this for initialization
 	void Start () {
@@ -20,36 +25,74 @@ public class Button : MonoBehaviour {
 
     private void OnMouseEnter()
     {
-        myRenderer.material = mouseOverMaterial;
+        myRenderer.material = mouseOverMaterialUp;
+        if (buttonType==type.Lock && isDepressed)
+        {
+            myRenderer.material = mouseOverMaterialDown;
+        }
         Debug.Log("Mouse Enter");
         isSelected = true;
     }
 
     private void OnMouseExit()
     {
-        myRenderer.material = idleMaterial;
+        myRenderer.material = buttonUpMaterial;
+        if (buttonType == type.Lock && isDepressed)
+        {
+            myRenderer.material = buttonDownMaterial;
+            canRelease = true;
+        }
+
         Debug.Log("Mouse Leave");
         isSelected = false;
+        if (buttonType==type.Hold)
+        {
+            myAnimator.SetTrigger("released");
+            isDepressed = false;
+        }
     }
 
     private void OnMouseDown()
     {
-        if (isSelected)
+        if (isSelected && !isDepressed)
         {
-            myRenderer.material = mouseDownMaterial;
+            myRenderer.material = buttonDownMaterial;
             Debug.Log("Button Clicked");
             myAnimator.SetTrigger("pressed");
+            myAnimator.ResetTrigger("released");
+            isDepressed = true;
+            if (buttonType == type.Lock)
+            {
+                canRelease = false;
+            }
         }
     }
 
     private void OnMouseUp()
     {
-        if (isSelected)
+        if (buttonType == type.Hold && isSelected && isDepressed)
         {
-            myRenderer.material = mouseOverMaterial;
-            Debug.Log("Button Released");
             myAnimator.SetTrigger("released");
+            myAnimator.ResetTrigger("pressed");
+            myRenderer.material = mouseOverMaterialUp;
+            isDepressed = false;
         }
+        if (buttonType == type.Lock)
+        {
+            if (canRelease)
+            {
+                myAnimator.SetTrigger("released");
+                myAnimator.ResetTrigger("pressed");
+                myRenderer.material = mouseOverMaterialUp;
+                isDepressed = false;
+            }
+            else
+            {
+                canRelease = true;
+            }
+
+        }
+
     }
 
     // Update is called once per frame
